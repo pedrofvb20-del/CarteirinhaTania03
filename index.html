@@ -130,7 +130,7 @@
       <div id="print-area" class="flex flex-wrap justify-center gap-6 p-4 bg-transparent mx-auto min-w-max">
         
         <!-- === FRENTE === -->
-        <div class="card-face flex flex-col p-5 bg-gradient-to-b from-[#380242] to-[#5a0669]">
+        <div class="card-face flex flex-col p-4 bg-gradient-to-b from-[#380242] to-[#5a0669]">
           <div class="card-bg-dots"></div>
           
           <div class="relative z-10 flex-1 flex flex-col">
@@ -144,37 +144,49 @@
 
             <!-- Corpo Branco Central -->
             <div class="bg-white flex-1 rounded-xl p-3 pb-2 flex flex-col items-center border-2 border-[#ffcc00] shadow-inner relative overflow-hidden">
+              
               <p class="font-comic text-base text-[#380242] text-center mb-1 leading-tight">
                 Presença confirmada<br>no aniversário!
               </p>
 
-              <!-- Foto (Tamanho Reduzido para caber perfeitamente no PDF) -->
-              <div class="w-20 h-20 rounded-lg border-4 border-[#ffcc00] overflow-hidden shadow-md mb-1 bg-gray-100 flex-shrink-0 relative">
+              <!-- Foto (Aumentada para w-28 h-28 para mais destaque) -->
+              <div class="w-28 h-28 rounded-lg border-4 border-[#ffcc00] overflow-hidden shadow-md mb-1 bg-gray-100 flex-shrink-0 relative">
                 <div class="absolute bottom-0 right-0 bg-[#380242] text-[#ffcc00] text-[10px] px-1 rounded-tl font-bold z-10">♀️</div>
                 <img id="cardPhoto" src="https://placehold.co/400x400/380242/ffcc00?text=Sua+Foto" alt="Foto" class="w-full h-full object-cover">
               </div>
 
-              <!-- Dados -->
-              <div class="text-center w-full mb-1">
+              <!-- Dados Nome/Idade -->
+              <div class="text-center w-full mb-0">
                 <h3 id="cardName" class="font-combat text-base font-black text-[#380242] leading-tight break-words">Tânia Chantel</h3>
                 <p id="cardAgeCity" class="text-[10px] font-bold text-gray-600 mt-0">43 anos | Itacoatiara - AM</p>
               </div>
 
-              <!-- Matrícula -->
-              <div class="w-full bg-[#380242] text-[#ffcc00] text-center py-1 rounded-lg border border-[#ffcc00] mb-1">
-                <span class="text-[9px] font-combat tracking-wider block">MATRÍCULA DE COMBATE</span>
-                <span id="cardReg" class="font-bold text-sm tracking-widest font-mono">AM-0125431</span>
+              <!-- Mola (flex-grow) que empurra os próximos itens para baixo -->
+              <div class="flex-grow w-full flex flex-col justify-end mt-1">
+                
+                <!-- Divisor: Elementos Bandeira do Brasil -->
+                <div class="w-full flex items-center justify-center gap-1 mb-2">
+                  <div class="h-0.5 flex-1 bg-gradient-to-r from-[#009c3b] to-[#ffdf00]"></div>
+                  <span class="text-[8px] font-combat text-[#002776] tracking-widest uppercase">★ Ordem e Progresso ★</span>
+                  <div class="h-0.5 flex-1 bg-gradient-to-r from-[#ffdf00] to-[#002776]"></div>
+                </div>
+
+                <!-- Matrícula -->
+                <div class="w-full bg-[#380242] text-[#ffcc00] text-center py-1 rounded-lg border border-[#ffcc00] mb-1.5">
+                  <span class="text-[9px] font-combat tracking-wider block">MATRÍCULA DE COMBATE</span>
+                  <span id="cardReg" class="font-bold text-sm tracking-widest font-mono">AM-0125431</span>
+                </div>
+
+                <!-- Caixa: Eleições 2026 (Feminista/Lulista) -->
+                <div class="w-full bg-[#ffcc00] text-[#380242] text-center py-1 px-2 rounded-lg border border-[#380242] mb-1 shadow-sm relative overflow-hidden">
+                  <span class="absolute -right-1 -top-1 opacity-20 font-black text-[40px] font-comic leading-none">L</span>
+                  <span class="text-[8px] font-combat tracking-wider block font-bold">♀️ ELEIÇÕES 2026 ✊🏽</span>
+                  <p class="font-bold text-[9px] leading-tight mt-0.5">Luiz Inácio Lula da Silva<br>64.256.232 votos (51,79%)</p>
+                </div>
               </div>
 
-              <!-- Caixa: Eleições 2026 (Feminista/Lulista) -->
-              <div class="w-full bg-[#ffcc00] text-[#380242] text-center py-1 px-2 rounded-lg border border-[#380242] mb-1 shadow-sm relative overflow-hidden">
-                <span class="absolute -right-1 -top-1 opacity-20 font-black text-[40px] font-comic leading-none">L</span>
-                <span class="text-[8px] font-combat tracking-wider block font-bold">♀️ ELEIÇÕES 2026 ✊🏽</span>
-                <p class="font-bold text-[9px] leading-tight mt-0.5">Luiz Inácio Lula da Silva<br>64.256.232 votos (51,79%)</p>
-              </div>
-
-              <!-- Patente e QR (Preso na base usando mt-auto) -->
-              <div class="w-full flex items-center justify-between mt-auto border-t-2 border-gray-100 pt-1 pb-1">
+              <!-- Patente e QR (Preso na base) -->
+              <div class="w-full flex items-center justify-between border-t-2 border-gray-100 pt-1 mt-1">
                 <div class="text-left">
                   <span class="text-[9px] font-combat text-gray-500 block">PATENTE OFICIAL</span>
                   <p id="cardPatente" class="font-bold text-[11px] text-[#380242]">Comandante Supremo</p>
@@ -187,7 +199,7 @@
         </div>
 
         <!-- === VERSO === -->
-        <div class="card-face flex flex-col p-5 bg-white">
+        <div class="card-face flex flex-col p-4 bg-white">
           <div class="card-bg-dots" style="background-image: radial-gradient(rgba(255, 204, 0, 0.3) 1.5px, transparent 1.5px);"></div>
           
           <div class="relative z-10 h-full flex flex-col">
