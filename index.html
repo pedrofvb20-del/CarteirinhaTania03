@@ -135,42 +135,42 @@
           
           <div class="relative z-10 flex-1 flex flex-col">
             <!-- Cabeçalho Frente -->
-            <div class="text-center mb-3">
+            <div class="text-center mb-2">
               <span class="text-[#ffcc00] font-combat text-xs tracking-widest block mb-1">EXÉRCITO DA</span>
-              <h2 class="font-comic text-[3.5rem] text-[#ffcc00] leading-none text-stroke">TÂNIA</h2>
+              <h2 class="font-comic text-5xl text-[#ffcc00] leading-none text-stroke">TÂNIA</h2>
             </div>
 
             <!-- Corpo Branco Central -->
-            <div class="bg-white flex-1 rounded-xl p-4 flex flex-col items-center border-2 border-[#ffcc00] shadow-inner relative">
-              <p class="font-comic text-2xl text-[#380242] text-center mb-4 leading-tight">
+            <div class="bg-white flex-1 rounded-xl p-3 pb-2 flex flex-col items-center border-2 border-[#ffcc00] shadow-inner relative overflow-hidden">
+              <p class="font-comic text-xl text-[#380242] text-center mb-2 leading-tight">
                 Presença confirmada<br>no aniversário!
               </p>
 
-              <!-- Foto -->
-              <div class="w-32 h-32 rounded-lg border-4 border-[#ffcc00] overflow-hidden shadow-md mb-4 bg-gray-100 flex-shrink-0">
+              <!-- Foto (Tamanho Reduzido para caber perfeitamente no PDF) -->
+              <div class="w-28 h-28 rounded-lg border-4 border-[#ffcc00] overflow-hidden shadow-md mb-2 bg-gray-100 flex-shrink-0">
                 <img id="cardPhoto" src="https://placehold.co/400x400/380242/ffcc00?text=Sua+Foto" alt="Foto" class="w-full h-full object-cover">
               </div>
 
               <!-- Dados -->
               <div class="text-center w-full">
-                <h3 id="cardName" class="font-combat text-2xl text-[#380242] leading-tight break-words">Tânia Chantel</h3>
-                <p id="cardAgeCity" class="text-sm font-bold text-gray-600 mt-1">43 anos | Itacoatiara - AM</p>
+                <h3 id="cardName" class="font-combat text-xl text-[#380242] leading-tight break-words">Tânia Chantel</h3>
+                <p id="cardAgeCity" class="text-xs font-bold text-gray-600 mt-1">43 anos | Itacoatiara - AM</p>
               </div>
 
               <!-- Matrícula -->
-              <div class="w-full bg-[#380242] text-[#ffcc00] text-center py-2 rounded-lg mt-4 border border-[#ffcc00]">
+              <div class="w-full bg-[#380242] text-[#ffcc00] text-center py-1 rounded-lg mt-2 border border-[#ffcc00]">
                 <span class="text-[10px] font-combat tracking-wider block">MATRÍCULA DE COMBATE</span>
-                <span id="cardReg" class="font-bold text-lg tracking-widest font-mono">AM-0125431</span>
+                <span id="cardReg" class="font-bold text-base tracking-widest font-mono">AM-0125431</span>
               </div>
 
-              <!-- Patente e QR -->
-              <div class="w-full flex items-center justify-between mt-4 border-t-2 border-gray-100 pt-3">
+              <!-- Patente e QR (Preso na base usando mt-auto) -->
+              <div class="w-full flex items-center justify-between mt-auto border-t-2 border-gray-100 pt-2 pb-1">
                 <div class="text-left">
                   <span class="text-[10px] font-combat text-gray-500 block">PATENTE OFICIAL</span>
-                  <p id="cardPatente" class="font-bold text-sm text-[#380242]">Comandante Supremo</p>
+                  <p id="cardPatente" class="font-bold text-xs text-[#380242]">Comandante Supremo</p>
                 </div>
                 <!-- Container do QR Code (Será convertido para IMG via JS) -->
-                <div id="qrCodeContainer" class="w-12 h-12 flex-shrink-0"></div>
+                <div id="qrCodeContainer" class="w-10 h-10 flex-shrink-0"></div>
               </div>
             </div>
           </div>
